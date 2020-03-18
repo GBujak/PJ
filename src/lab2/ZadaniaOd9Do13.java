@@ -23,5 +23,10 @@ public class ZadaniaOd9Do13 {
         stack.push(10);
         stack.clear();
         System.out.println(stack.getSize()); // 0
+
+        for (int i = 0; i < 20; i++)
+            stack.push(i);
+        stack.exhaust(x -> System.out.printf("%d, ", x));
+        System.out.println();
     }
 }

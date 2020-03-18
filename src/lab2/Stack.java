@@ -1,6 +1,8 @@
 package lab2;
 
 import java.util.Date;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class Stack {
     // Zadanie 13
@@ -97,5 +99,14 @@ public class Stack {
     }
     public int getModifyCount() {
         return modifyCount;
+    }
+
+    public void exhaust(Consumer<Integer> func) {
+        var tmp = top;
+        while (tmp != null) {
+            func.accept(tmp.val);
+            tmp = tmp.next;
+        }
+        clear();
     }
 }
