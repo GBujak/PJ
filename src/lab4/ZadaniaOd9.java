@@ -20,7 +20,5 @@ public class ZadaniaOd9 {
 
         System.out.println(test.toString());
         // lab4.ObjTest@5fd0d5ae
-
-
     }
 }
