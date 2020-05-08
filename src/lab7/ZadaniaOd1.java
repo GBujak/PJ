@@ -1,7 +1,5 @@
 package lab7;
 
-import java.util.ArrayList;
-
 class Bazowa {
     public void metoda() {
         System.out.println("metoda() z bazowej");
