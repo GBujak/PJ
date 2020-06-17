@@ -16,17 +16,17 @@ class MyUnsynch {
 
 // Zadanie 7
 class ObjectSynch {
-    Integer val = 0;
+    int val = 0;
     void setVal() {
-        synchronized (val) {
+        synchronized (this) {
             val = 100;
-            val.notify();
+            this.notify();
         }
     }
     void print() {
-        synchronized (val) {
+        synchronized (this) {
             try {
-                val.wait();
+                this.wait();
             } catch (Exception e) { e.printStackTrace(); }
             System.out.println(val);
         }
